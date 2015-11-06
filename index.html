@@ -2,26 +2,42 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
+
   <title>Analytics in 60 Seconds</title>
-  <script src="https://d26b395fwzu5fz.cloudfront.net/3.2.7/keen.min.js" type="text/javascript"></script>
+
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css" >
+  <link rel="stylesheet" href="./style.css" media="screen" title="no title" charset="utf-8">
+
+  <script src="https://code.jquery.com/jquery-2.1.4.min.js" type="text/javascript"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js" type="text/javascript"></script>
+  <script src="./script.js" type="text/javascript"></script>
+
 </head>
 <body>
-  <div id="chart"></div>
-  <script>
-    Keen.ready(function(){
-      var client = new Keen({
-        projectId: "562664262fd4b1228bb8410a",
-        writeKey: "e75fa8dce17fa192c2ed3da7f2d35cd30ebaab336d537c74a42278da8cac4ff11aea6d59c53791b48aae64bc0bd2222a24c9c63594021a8eab41e47c814e6e15d46315e7d6bfdaa1e411efdc9897238cf884b8bbe12f4cd7bc5b3cf2c9e09be2c456b15a43f161e9b458573240370614",
-        readKey: "76c09eba8bd1815104d38f669debb29c00eb6edf4236e1173c2147e80689a14185006d343b60d7b8e1770a20b5fcda10648e0f36862c77f204983d7bd09d2f2b89d56e00aba19d31eccbc20746709ce408c9a565e4fc9d699de4fd3e6adb0c36ea65de1af1c5a51b05d7e91b1e628bda"
-      })
-      var pageload = {
-        key: 'value'
-      }
-      client.addEvent('pageload', pageload)
-      client.draw(new Keen.Query('count', {
-        event_collection: 'pageload'
-      }), document.getElementById('chart'))
-    })
-  </script>
+
+<header>
+  The 60 Second Challenge
+  <div id="submit">
+    <a href="mailto:justin@keen.io?subject=60 Second Demo Submission">Submit yours!</a>
+  </div>
+</header>
+
+  <div class="container">
+    <div class="row">
+      <div class="col-sm-8 col-sm-offset-2">
+        <div id="intro">
+            Welcome to the 60 second challange! Make a brief video demoing an API and send it to us. We will put them all up here with a link to the open source project or to sign up for the service :D
+        </div>
+        <div id="video-container">
+        <iframe src="https://player.vimeo.com/video/144562061" width="500" height="308" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe> <p id="signup"> >> <a href="https://keen.io/signup">Signup for Keen IO</a>!</p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <footer>
+    A <a href="https://keen.io/community">Keen IO Community</a> project.
+  </footer>
+
 </body>
 </html>
