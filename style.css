@@ -5,6 +5,8 @@ header {
   border-bottom: black 2px solid;
   font-size: 35px;
   padding-left: 15px;
+  background-color: white;
+  z-index: 1;
 }
 
 #submit {
@@ -30,7 +32,12 @@ header {
 }
 
 footer {
-  position: absolute;
-  bottom: 0;
+  float: left;
   padding-left: 15px;
+}
+
+#explainer {
+  padding-top: 75px;
+  width: 80%
+  text-align:center;
 }
