@@ -32,8 +32,9 @@ header {
 }
 
 footer {
-  float: left;
-  padding-left: 15px;
+  bottom:0;
+  padding-left:10px;
+  padding-top: 100px;
 }
 
 #explainer {
